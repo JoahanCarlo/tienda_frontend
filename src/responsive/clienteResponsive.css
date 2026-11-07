@@ -1,0 +1,14 @@
+@media (max-width: 576px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .table-responsive table {
+        min-width: 700px;
+    }
+
+    .dt-search input {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}

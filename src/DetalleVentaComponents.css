@@ -1,0 +1,71 @@
+
+.detalle-venta-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 2000;
+}
+
+.detalle-venta-modal {
+    background: #fff;
+    width: 100%;
+    max-width: 950px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.detalle-venta-header,
+.detalle-venta-footer {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.detalle-venta-header h4 {
+    margin: 0;
+}
+
+.detalle-venta-body {
+    padding: 20px;
+}
+
+.detalle-venta-body label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.campo-visor {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.detalle-venta-body h5 {
+    margin-bottom: 16px;
+}
+
+.detalle-venta-total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    font-size: 1.25rem;
+    padding: 20px 0;
+}
+
+.detalle-venta-footer {
+    justify-content: flex-end;
+    border-top: 1px solid #dee2e6;
+    border-bottom: none;
+}

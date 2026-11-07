@@ -1,0 +1,33 @@
+.form-check.form-switch .form-check-input {
+    width: 3.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 2rem;
+    transition: background-color 0.2s ease;
+}
+
+.form-check.form-switch .form-check-input::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #ffffff !important;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.form-check.form-switch .form-check-input:checked {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+}
+
+.form-check.form-switch .form-check-input:checked::after {
+    transform: translateX(2rem);
+}
