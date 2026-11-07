@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# Frontend - Sistema de Gestión de Tienda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción del proyecto
 
-## Available Scripts
+Aplicación frontend de un sistema de gestión de tienda, desarrollada con **React y JavaScript**. Permite administrar usuarios, clientes, productos y ventas mediante una interfaz gráfica dinámica e intuitiva.
 
-In the project directory, you can run:
+El frontend se comunica con un backend desarrollado en Java y Spring Boot mediante servicios REST.
 
-### `npm start`
+## Tecnologías utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React:** Desarrollo de interfaces mediante componentes reutilizables.
+- **JavaScript:** Lógica de la aplicación.
+- **HTML5:** Estructura de las vistas.
+- **CSS3:** Estilos de la aplicación.
+- **Bootstrap 5:** Diseño adaptable y componentes visuales.
+- **Axios:** Comunicación con servicios REST.
+- **DataTables:** Gestión de tablas, búsqueda, ordenamiento y paginación.
+- **SweetAlert2:** Alertas, confirmaciones y notificaciones.
+- **Font Awesome:** Iconos para la interfaz.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Funcionalidades del sistema
 
-### `npm test`
+### Autenticación
+- Inicio de sesión de usuarios.
+- Validación de credenciales mediante el backend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Gestión de usuarios
+- Registrar usuarios.
+- Listar usuarios.
+- Actualizar información.
+- Activar y desactivar usuarios.
 
-### `npm run build`
+### Gestión de clientes
+- Registrar clientes.
+- Consultar clientes.
+- Actualizar información.
+- Eliminar clientes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Gestión de productos
+- Registrar productos.
+- Consultar productos.
+- Actualizar información.
+- Eliminar productos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Gestión de ventas
+- Registrar ventas.
+- Consultar ventas.
+- Visualizar información de las ventas.
+- Generar reportes de ventas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Estructura del proyecto
 
-### `npm run eject`
+```text
+src/
+├── components/
+│   ├── MenuPrincipalComponent.jsx
+│   ├── ListClientesComponent.jsx
+│   ├── RegistrarClientesComponent.jsx
+│   ├── ListProductosComponent.jsx
+│   ├── ListUsuarioComponent.jsx
+│   ├── RegistrarVentasComponents.jsx
+│   └── ...
+│
+├── service/
+│   ├── ClienteService.js
+│   ├── ProductoService.js
+│   ├── UsuarioService.js
+│   ├── VentaService.js
+│   └── ...
+│
+├── App.js
+├── index.js
+└── ...
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Descripción de las carpetas:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `components/`: Contiene los componentes, formularios y vistas de la aplicación.
+- `service/`: Contiene los servicios encargados de realizar las peticiones HTTP al backend.
+- `App.js`: Componente principal de la aplicación.
+- `index.js`: Punto de entrada de React.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Requisitos previos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para ejecutar el proyecto se necesita:
 
-## Learn More
+- Node.js.
+- npm.
+- Backend del sistema desarrollado con Spring Boot.
+- Editor de código, como Visual Studio Code.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Instalación y ejecución
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 1. Clonar el repositorio
 
-### Code Splitting
+```bash
+git clone URL_DEL_REPOSITORIO
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 2. Ingresar a la carpeta del frontend
 
-### Analyzing the Bundle Size
+```bash
+cd tienda-frontend
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3. Instalar dependencias
 
-### Making a Progressive Web App
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 4. Ejecutar la aplicación
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+El frontend estará disponible en:
 
-### Deployment
+**http://localhost:3000**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Conexión con el backend
 
-### `npm run build` fails to minify
+El frontend consume los servicios REST del backend desarrollado con Java y Spring Boot.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Aplicación | URL |
+|---|---|
+| Frontend (React) | http://localhost:3000 |
+| Backend (Spring Boot) | http://localhost:8080 |
+
+Los servicios HTTP se encuentran organizados en la carpeta `service/`, utilizando Axios para realizar las operaciones de comunicación con el backend.
+
+**Importante:** Para utilizar todas las funcionalidades del sistema, el backend debe estar ejecutándose en `http://localhost:8080`.
+
+## Autor
+
+Proyecto desarrollado como práctica de desarrollo frontend con React e integración de servicios REST con Spring Boot.
